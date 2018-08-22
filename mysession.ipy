@@ -1,0 +1,288 @@
+# coding: utf-8
+import boto3 
+ec2_clnt = boto3.client('ec2')
+ec2_res = boto3.response('ec2')
+ec2_res = boto3.resource('ec2')
+r = ec2_client.describe_vpcs()
+r = ec2_clnt.describe_vpcs()
+for i in r: 
+    print (i)
+    
+for i in r['Vpcs']: 
+    print (i)
+    
+for i in r['ResponseMetadata']: 
+    print (i)
+    
+for i in r['Vpcs']: 
+    print (i)
+    
+for i in r['Vpcs']: 
+    print (i['CidrBlock'])
+    
+for i in r['Vpcs']: 
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    
+for i in r['Vpcs']: 
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print (i['Tags'])
+    
+for i in r['Vpcs']: 
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print (i['CidrBlockState'])
+    
+for i in r['Vpcs']: 
+    
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print (i['CidrBlockState'])
+    
+%history
+for i in r['Vpcs']: 
+    print (i)
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print (i['CidrBlockState'])
+    
+for i in r['Vpcs']: 
+    print (i)
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'] + "CidrBlockAssociationSet")
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'] + 'CidrBlockAssociationSet')
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'] + 'str(CidrBlockAssociationSet)')
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print ("i['CidrBlockAssociationSet'] + 'str(CidrBlockAssociationSet)'")
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print ("i['CidrBlockAssociationSet'] + 'CidrBlockAssociationSet'")
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+    print (i['CidrBlockState'])
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet']['CidrBlockState'])
+   
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+   
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print ("------------------------------------")
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+   
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print ("------------------------------------")
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+    print (i['Tags'])
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print ("------------------------------------")
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+    try:
+        print (i['Tags'])
+        
+    except Keyerror:
+        pass
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print ("------------------------------------")
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+    try:
+        print (i['Tags'])
+        
+    except KeyError:
+        pass
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print ("------------------------------------")
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+    try:
+        print (i['Tags'])
+    except KeyError:
+        pass
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print ("------------------------------------")
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+    try:
+        print (i['Tags']['Key'])
+    except KeyError:
+        pass
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print ("------------------------------------")
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+    try:
+        print (i['Tags'][0])
+    except KeyError:
+        pass
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print ("------------------------------------")
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+    try:
+        print (i['Tags'][0]['Key'])
+    except KeyError:
+        pass
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print ("------------------------------------")
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+    try:
+        print (i['Tags'][0]['Key'])
+        print (i['Tags'][0]['Value'])
+    except KeyError:
+        pass
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print ("------------------------------------")
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+    try:
+        print (i['Tags'][0]['Key']) ,
+        print (i['Tags'][0]['Value'])
+    except KeyError:
+        pass
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print ("------------------------------------")
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+    try:
+        print (i['Tags'][0]['Key']),
+        print (i['Tags'][0]['Value'])
+    except KeyError:
+        pass
+        
+for i in r['Vpcs']: 
+    print (i)
+    print ("--------------------------------------------")
+    print (i['CidrBlock'])
+    print ("------------------------------------")
+    print (i['VpcId'])
+    print (i['CidrBlockAssociationSet'])
+    try:
+        print (i['Tags'][0]['Key'])
+        print (i['Tags'][0]['Value'])
+    except KeyError:
+        pass
+        
+%history 
+%save 1-43
+%save 1-43 test
+%save 1-43 > test
+%hostory 
+%history 
+%history 
+%history 
+%history -f historyfile
+%save -r 1-50 mysession
+%save -r mysession 1-52
