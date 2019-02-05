@@ -1,4 +1,5 @@
-#!/usr/bin/python3.6
+#!/usr/bin/env python3.7 
+
 
 
 import boto3

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python3.7
 import boto3
 from botocore.exceptions import ClientError
 import pandas as pd
@@ -12,28 +12,32 @@ labels = ["Group_Name", "Group_id", "Vpc_id", "Ip_Proto", "Cidr", "To_Port", "Fr
 
 ec2 = boto3.resource('ec2')
 groups = list(ec2.security_groups.all())
-
+print (groups)
 allrows = []
 for gps in groups: 
+     print (gps.group_name)
+     print (gps.id)
+     print (gps.vpc_id)
+     print (gps.ip_permissions[0])
     row = []
-    row.append(gps.group_name)
-    row.append(gps.group_id)
-    row.append(gps.vpc_id)
-    row.append(gps.ip_permissions[0]['IpProtocol'])
-    try:
-        row.append(gps.ip_permissions[0]['IpRanges'][0]['CidrIp'])
-    except IndexError:
-        row.append("-")
-    try:
-        row.append(gps.ip_permissions[0]['ToPort'])
-        row.append(gps.ip_permissions[0]['FromPort'])
-    except KeyError:
-       row.append("-")
-    allrows.append(row)
+#    row.append(gps.group_name)
+#    row.append(gps.group_id)
+#    row.append(gps.vpc_id)
+#    row.append(gps.ip_permissions[0]['IpProtocol'])
+#    try:
+#        row.append(gps.ip_permissions[0]['IpRanges'][0]['CidrIp'])
+#    except IndexError:
+#        row.append("-")
+#    try:
+#        row.append(gps.ip_permissions[0]['ToPort'])
+#        row.append(gps.ip_permissions[0]['FromPort'])
+#    except KeyError:
+#       row.append("-")
+#    allrows.append(row)
 
-df = pd.DataFrame.from_records(allrows, columns=labels)
-df.to_csv('/tmp/ingresrules.csv', header = True, index = True, na_rep = '-')
+#df = pd.DataFrame.from_records(allrows, columns=labels)
+#df.to_csv('/tmp/ingresrules.csv', header = True, index = True, na_rep = '-')
 #df.to_html('/tmp/ingresrules.html')
 
-print df
+#print (df)
 
